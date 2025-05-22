@@ -13,3 +13,7 @@ export const test3 = (a, b) => {
 export const test4 = (a, b) => {
   return a + b;
 };
+
+export const test5 = (a, b) => {
+  return a + b;
+};
