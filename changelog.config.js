@@ -1,11 +1,17 @@
-module.exports = {
+export default {
   writerOpts: {
-    // 只保留 scope 为 dify-sdk 的 commit
-    transform: (commit) => {
-      if (commit.scope === "dify-sdk") {
-        return commit;
+    transform: (commit, context) => {
+      console.log(commit);
+      if (commit.type === "feat") {
+        commit.type = "✨ Features | 新功能";
+      } else if (commit.type === "fix") {
+        commit.type = "🐛 Bug Fixes | Bug 修复";
+      } else if (commit.type === "perf") {
+        commit.type = "⚡ Performance Improvements | 性能优化";
+      } else if (commit.type === "revert" || commit.revert) {
+        commit.type = "⏪ Reverts | 回退";
       }
-      return false; // 其他 scope 不展示
+      return commit;
     },
   },
 };

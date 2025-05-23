@@ -1,0 +1,23 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Launch Program",
+      "cwd": "${workspaceFolder}",
+      "program": "${workspaceFolder}/node_modules/conventional-changelog-cli/cli.js",
+      "args": [
+        "-p",
+        "angular",
+        "-i",
+        "CHANGELOG.md",
+        "-s",
+        "-r",
+        "0",
+        "-n",
+        "./changelog.config.js"
+      ]
+    }
+  ]
+}
