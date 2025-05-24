@@ -13,8 +13,6 @@
         "-i",
         "CHANGELOG.md",
         "-s",
-        "-r",
-        "0",
         "-n",
         "./changelog.config.js"
       ]
